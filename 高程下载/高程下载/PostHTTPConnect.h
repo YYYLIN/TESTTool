@@ -12,9 +12,9 @@
 #define  DOWNLOAD_GetLengthF      5
 
 /*
-²ÎÊý:1.Êý¾Ý
-     2.Êý¾Ý³¤¶È
-	 3.´«ÈëµÄ¿ÕÖ¸Õë
+å‚æ•°:1.æ•°æ®
+     2.æ•°æ®é•¿åº¦
+	 3.ä¼ å…¥çš„ç©ºæŒ‡é’ˆ
 */
 typedef void(*CallbackFun)(char* ,unsigned int ,void* );
 
@@ -24,130 +24,130 @@ public:
 	PostHTTPConnect();
 	~PostHTTPConnect();
 	/*
-	º¯ÊýÃû:SendHTTPMessage
-	²ÎÊý:1.ÏûÏ¢    
-	     2.ÏûÏ¢³¤¶È
-    ¹¦ÄÜ:Ïò·¢ËÍÍøÒ³·¢ËÍÏûÏ¢
-	·µ»ØÖµ:
+	å‡½æ•°å:SendHTTPMessage
+	å‚æ•°:1.æ¶ˆæ¯    
+	     2.æ¶ˆæ¯é•¿åº¦
+    åŠŸèƒ½:å‘å‘é€ç½‘é¡µå‘é€æ¶ˆæ¯
+	è¿”å›žå€¼:
 	*/
 	void SendHTTPMessage(char* _message, int _size);
 	/*
-	º¯ÊýÃû:SendVersionRequest
-	²ÎÊý:
-	¹¦ÄÜ:ÇëÇó»ñÈ¡SimApp°æ±¾
-	·µ»ØÖµ:·¢ËÍÊ§°ÜÕßÎª0£¬·ñÔò³É¹¦
+	å‡½æ•°å:SendVersionRequest
+	å‚æ•°:
+	åŠŸèƒ½:è¯·æ±‚èŽ·å–SimAppç‰ˆæœ¬
+	è¿”å›žå€¼:å‘é€å¤±è´¥è€…ä¸º0ï¼Œå¦åˆ™æˆåŠŸ
 	*/
 	bool SendVersionRequest();
 	/*
-	º¯ÊýÃû:DownloadFileRequest
-	²ÎÊý:1.ÏÂÔØµÄÍøÒ³Â·¾¶(²»ÐèÒª¿ªÍ·µØÖ·.Àý:/upfile/Upload/2016729/G.S%20CESSNA172%20UpdateFile_V1.62.zip)
-	     2.»Øµ÷º¯Êý,µ±ÎÄ¼þÏÂÔØÍê³ÉÒÔºóµ÷ÓÃÕâ¸öº¯Êý
-	¹¦ÄÜ:Ïò·þÎñÆ÷·¢ËÍÇëÇóÏÂÔØÒ»¸öÎÄ¼þ£¬»òÕßÍøÒ³
-	·µ»ØÖµ:·¢ËÍÊ§°ÜÕßÎª0£¬·ñÔò³É¹¦
+	å‡½æ•°å:DownloadFileRequest
+	å‚æ•°:1.ä¸‹è½½çš„ç½‘é¡µè·¯å¾„(ä¸éœ€è¦å¼€å¤´åœ°å€.ä¾‹:/upfile/Upload/2016729/G.S%20CESSNA172%20UpdateFile_V1.62.zip)
+	     2.å›žè°ƒå‡½æ•°,å½“æ–‡ä»¶ä¸‹è½½å®Œæˆä»¥åŽè°ƒç”¨è¿™ä¸ªå‡½æ•°
+	åŠŸèƒ½:å‘æœåŠ¡å™¨å‘é€è¯·æ±‚ä¸‹è½½ä¸€ä¸ªæ–‡ä»¶ï¼Œæˆ–è€…ç½‘é¡µ
+	è¿”å›žå€¼:å‘é€å¤±è´¥è€…ä¸º0ï¼Œå¦åˆ™æˆåŠŸ
 	*/
 	bool DownloadFileRequest(char*, CallbackFun, void*);
 	/*
-	º¯ÊýÃû:GetSIMAPPVersionState
-	²ÎÊý:
-	¹¦ÄÜ:µ±·¢ËÍÇëÇó»ñÈ¡µ½SimApp°æ±¾ÒÔºó£¬¿ÉÒÔÍ¨¹ýÕâ¸öÈ·ÈÏÊÇ·ñÓÐÐÂ°æ±¾¡£
-	·µ»ØÖµ:ÓÐÐÂ°æÎª1£¬·ñÔòÎª0
+	å‡½æ•°å:GetSIMAPPVersionState
+	å‚æ•°:
+	åŠŸèƒ½:å½“å‘é€è¯·æ±‚èŽ·å–åˆ°SimAppç‰ˆæœ¬ä»¥åŽï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªç¡®è®¤æ˜¯å¦æœ‰æ–°ç‰ˆæœ¬ã€‚
+	è¿”å›žå€¼:æœ‰æ–°ç‰ˆä¸º1ï¼Œå¦åˆ™ä¸º0
 	*/
 	bool GetSIMAPPVersionState();
 	/*
-	º¯ÊýÃû:GetSIMAPPVersion
-	²ÎÊý:
-	¹¦ÄÜ:µ±·¢ËÍÇëÇó»ñÈ¡µ½SimApp°æ±¾ÒÔºó£¬¿ÉÒÔÍ¨¹ýÕâ¸ö»ñÈ¡ÐÂ°æ±¾ºÅ¡£
-	·µ»ØÖµ:ÓÐÐÂ°æÎª1£¬·ñÔòÎª0
+	å‡½æ•°å:GetSIMAPPVersion
+	å‚æ•°:
+	åŠŸèƒ½:å½“å‘é€è¯·æ±‚èŽ·å–åˆ°SimAppç‰ˆæœ¬ä»¥åŽï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªèŽ·å–æ–°ç‰ˆæœ¬å·ã€‚
+	è¿”å›žå€¼:æœ‰æ–°ç‰ˆä¸º1ï¼Œå¦åˆ™ä¸º0
 	*/
 	void GetSIMAPPVersion(char* _ver);
 	/*
-	º¯ÊýÃû:GetCESSNA172Version
-	²ÎÊý:
-	¹¦ÄÜ:µ±·¢ËÍÇëÇó»ñÈ¡µ½CESSNA172°æ±¾ÒÔºó£¬¿ÉÒÔÍ¨¹ýÕâ¸ö»ñÈ¡ÐÂ°æ±¾ºÅ¡£
-	·µ»ØÖµ:
+	å‡½æ•°å:GetCESSNA172Version
+	å‚æ•°:
+	åŠŸèƒ½:å½“å‘é€è¯·æ±‚èŽ·å–åˆ°CESSNA172ç‰ˆæœ¬ä»¥åŽï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªèŽ·å–æ–°ç‰ˆæœ¬å·ã€‚
+	è¿”å›žå€¼:
 	*/
 	void GetCESSNA172Version(char* _ver);
 	/*
-	º¯ÊýÃû:GetAUDIOVersion
-	²ÎÊý:
-	¹¦ÄÜ:µ±·¢ËÍÇëÇó»ñÈ¡µ½AUDIO°æ±¾ÒÔºó£¬¿ÉÒÔÍ¨¹ýÕâ¸ö»ñÈ¡ÐÂ°æ±¾ºÅ¡£
-	·µ»ØÖµ:
+	å‡½æ•°å:GetAUDIOVersion
+	å‚æ•°:
+	åŠŸèƒ½:å½“å‘é€è¯·æ±‚èŽ·å–åˆ°AUDIOç‰ˆæœ¬ä»¥åŽï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªèŽ·å–æ–°ç‰ˆæœ¬å·ã€‚
+	è¿”å›žå€¼:
 	*/
 	void GetAUDIOVersion(char* _ver);
 	/*
-	º¯ÊýÃû:GetPFDMFDVersion
-	²ÎÊý:
-	¹¦ÄÜ:µ±·¢ËÍÇëÇó»ñÈ¡µ½PFDMFD°æ±¾ÒÔºó£¬¿ÉÒÔÍ¨¹ýÕâ¸ö»ñÈ¡ÐÂ°æ±¾ºÅ¡£
-	·µ»ØÖµ:
+	å‡½æ•°å:GetPFDMFDVersion
+	å‚æ•°:
+	åŠŸèƒ½:å½“å‘é€è¯·æ±‚èŽ·å–åˆ°PFDMFDç‰ˆæœ¬ä»¥åŽï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªèŽ·å–æ–°ç‰ˆæœ¬å·ã€‚
+	è¿”å›žå€¼:
 	*/
 	void GetPFDMFDVersion(char* _ver);
 	/*
-	º¯ÊýÃû:GetCESSNA172Add
-	²ÎÊý:
-	¹¦ÄÜ:µ±·¢ËÍÇëÇó»ñÈ¡µ½CESSNA172°æ±¾ÒÔºó£¬¿ÉÒÔÍ¨¹ýÕâ¸ö»ñÈ¡ÐÂ°æ±¾ÏÂÔØÁ´½Ó¡£
-	·µ»ØÖµ:
+	å‡½æ•°å:GetCESSNA172Add
+	å‚æ•°:
+	åŠŸèƒ½:å½“å‘é€è¯·æ±‚èŽ·å–åˆ°CESSNA172ç‰ˆæœ¬ä»¥åŽï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªèŽ·å–æ–°ç‰ˆæœ¬ä¸‹è½½é“¾æŽ¥ã€‚
+	è¿”å›žå€¼:
 	*/
 	void GetCESSNA172Add(char* _Add);
 	/*
-	º¯ÊýÃû:GetAUDIOAdd
-	²ÎÊý:
-	¹¦ÄÜ:µ±·¢ËÍÇëÇó»ñÈ¡µ½AUDIO°æ±¾ÒÔºó£¬¿ÉÒÔÍ¨¹ýÕâ¸ö»ñÈ¡ÐÂ°æ±¾ÏÂÔØÁ´½Ó¡£
-	·µ»ØÖµ:
+	å‡½æ•°å:GetAUDIOAdd
+	å‚æ•°:
+	åŠŸèƒ½:å½“å‘é€è¯·æ±‚èŽ·å–åˆ°AUDIOç‰ˆæœ¬ä»¥åŽï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªèŽ·å–æ–°ç‰ˆæœ¬ä¸‹è½½é“¾æŽ¥ã€‚
+	è¿”å›žå€¼:
 	*/
 	void GetAUDIOAdd(char* _Add);
 	/*
-	º¯ÊýÃû:GetPFDMFDAdd
-	²ÎÊý:
-	¹¦ÄÜ:µ±·¢ËÍÇëÇó»ñÈ¡µ½PFDMFD°æ±¾ÒÔºó£¬¿ÉÒÔÍ¨¹ýÕâ¸ö»ñÈ¡ÐÂ°æ±¾ÏÂÔØÁ´½Ó¡£
-	·µ»ØÖµ:
+	å‡½æ•°å:GetPFDMFDAdd
+	å‚æ•°:
+	åŠŸèƒ½:å½“å‘é€è¯·æ±‚èŽ·å–åˆ°PFDMFDç‰ˆæœ¬ä»¥åŽï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªèŽ·å–æ–°ç‰ˆæœ¬ä¸‹è½½é“¾æŽ¥ã€‚
+	è¿”å›žå€¼:
 	*/
 	void GetPFDMFDAdd(char* _Add);
 	/*
-	º¯ÊýÃû:GetCurrentReceiveType
-	²ÎÊý:
-	¹¦ÄÜ:»ñÈ¡µ±Ç°Á¬½Ó×´Ì¬ DOWNLOAD_Completion ÎªÕýÔÚÏÂÔØ
-	·µ»ØÖµ:·µ»Ø0ÎªÃ»ÓÐÁ¬½Ó
+	å‡½æ•°å:GetCurrentReceiveType
+	å‚æ•°:
+	åŠŸèƒ½:èŽ·å–å½“å‰è¿žæŽ¥çŠ¶æ€ DOWNLOAD_Completion ä¸ºæ­£åœ¨ä¸‹è½½
+	è¿”å›žå€¼:è¿”å›ž0ä¸ºæ²¡æœ‰è¿žæŽ¥
 	*/
 	char GetCurrentReceiveType(){ return ReceiveType; }
 	/*
-	º¯ÊýÃû:GetCurrentFileLength
-	²ÎÊý:
-	¹¦ÄÜ:Èç¹ûÕýÔÚÏÂÔØ£¬¿ÉÒÔ»ñÈ¡µ±Ç°ÎÄ¼þ×Ü³¤¶È
-	·µ»ØÖµ:ÎÄ¼þ×ÜµÄ×Ö½ÚÊý
+	å‡½æ•°å:GetCurrentFileLength
+	å‚æ•°:
+	åŠŸèƒ½:å¦‚æžœæ­£åœ¨ä¸‹è½½ï¼Œå¯ä»¥èŽ·å–å½“å‰æ–‡ä»¶æ€»é•¿åº¦
+	è¿”å›žå€¼:æ–‡ä»¶æ€»çš„å­—èŠ‚æ•°
 	*/
 	unsigned int GetCurrentFileLength(){ return m_FileLength; }
 	/*
-	º¯ÊýÃû:GetCurrentReceiveLength
-	²ÎÊý:
-	¹¦ÄÜ:Èç¹ûÎÄ¼þÕýÔÚÏÂÔØ£¬¿ÉÒÔ»ñÈ¡µ±Ç°ËùÏÂÔØµÄ×Ö½ÚÊý
-	·µ»ØÖµ:µ±Ç°ËùÏÂÔØµÄ×Ö½ÚÊý
+	å‡½æ•°å:GetCurrentReceiveLength
+	å‚æ•°:
+	åŠŸèƒ½:å¦‚æžœæ–‡ä»¶æ­£åœ¨ä¸‹è½½ï¼Œå¯ä»¥èŽ·å–å½“å‰æ‰€ä¸‹è½½çš„å­—èŠ‚æ•°
+	è¿”å›žå€¼:å½“å‰æ‰€ä¸‹è½½çš„å­—èŠ‚æ•°
 	*/
 	unsigned int GetCurrentReceiveLength(){ return m_NowPos; }
 	/*
-	º¯ÊýÃû:GetError
-	²ÎÊý:
-	¹¦ÄÜ:Èç¹ûÎÄ¼þÕýÔÚÏÂÔØ£¬¿ÉÒÔ»ñÈ¡µ±Ç°ÏÂÔØµÄ´íÎó²ÎÊý
-	·µ»ØÖµ:´íÎó²ÎÊý
-	       DOWNLOAD_NOW            ÕýÔÚÏÂÔØ
-	       DOWNLOAD_Completion     ÏÂÔØÍê³É
-	       DOWNLOAD_Failure        ÏÂÔØÊ§°Ü
-		   DOWNLOAD_CreateMemoryF  ´´½¨ÄÚ´æÊ§°Ü
-		   DOWNLOAD_GetLengthF     »ñÈ¡ÎÄ¼þ³¤¶ÈÊ§°Ü
+	å‡½æ•°å:GetError
+	å‚æ•°:
+	åŠŸèƒ½:å¦‚æžœæ–‡ä»¶æ­£åœ¨ä¸‹è½½ï¼Œå¯ä»¥èŽ·å–å½“å‰ä¸‹è½½çš„é”™è¯¯å‚æ•°
+	è¿”å›žå€¼:é”™è¯¯å‚æ•°
+	       DOWNLOAD_NOW            æ­£åœ¨ä¸‹è½½
+	       DOWNLOAD_Completion     ä¸‹è½½å®Œæˆ
+	       DOWNLOAD_Failure        ä¸‹è½½å¤±è´¥
+		   DOWNLOAD_CreateMemoryF  åˆ›å»ºå†…å­˜å¤±è´¥
+		   DOWNLOAD_GetLengthF     èŽ·å–æ–‡ä»¶é•¿åº¦å¤±è´¥
 	*/
 	int GetError(){ return m_Error; }
 	/*
-	º¯ÊýÃû:CloseDownload
-	²ÎÊý:
-	¹¦ÄÜ:Èç¹ûÎÄ¼þÕýÔÚÏÂÔØ£¬µ÷ÓÃ´Ëº¯Êý¹Ø±ÕÏÂÔØ
-	·µ»ØÖµ:
+	å‡½æ•°å:CloseDownload
+	å‚æ•°:
+	åŠŸèƒ½:å¦‚æžœæ–‡ä»¶æ­£åœ¨ä¸‹è½½ï¼Œè°ƒç”¨æ­¤å‡½æ•°å…³é—­ä¸‹è½½
+	è¿”å›žå€¼:
 	*/
 	void CloseDownload();
 	/*
-	º¯ÊýÃû:GetConnectState
-	²ÎÊý:ÍøÕ¾Ãû×ÖÀý: 
+	å‡½æ•°å:GetConnectState
+	å‚æ•°:ç½‘ç«™åå­—ä¾‹: 
 	     #define  WebsiteNAME   "www.generalsimulator.com" 
-	¹¦ÄÜ:»ñÈ¡ÍøÕ¾Á´½Ó×´Ì¬
-	·µ»ØÖµ:Á´½Ó³É¹¦·µ»Øtrue ·ñÔò false
+	åŠŸèƒ½:èŽ·å–ç½‘ç«™é“¾æŽ¥çŠ¶æ€
+	è¿”å›žå€¼:é“¾æŽ¥æˆåŠŸè¿”å›žtrue å¦åˆ™ false
 	*/
 	bool GetConnectState(char* );
 
@@ -198,5 +198,6 @@ private:
 	HANDLE Handle;
 	SOCKET sockClientTCP;
 	HANDLE hEvent;
+   int initState;
 };
 
