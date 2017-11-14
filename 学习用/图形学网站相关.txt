@@ -1,0 +1,7 @@
+1.利用现代OpenGL API大幅度减少由于执行驱动导致CPU的开销
+(Indirect | Multi | 无绑定（bindless）| 新的缓冲区分配接口 取代之前的glBufferData->glBufferStroage)
+http://www.opengpu.org/home.php?mod=space&uid=36152&do=blog&id=598
+2.如何在OpenGL中进行高效渲染  (图元重启 | Batch Rendering | 渲染路径 Rendering Path)
+https://lealzhan.github.io/lealzhan.github.io/blog/2017/01/07/opengl-rendering-efficiency/
+3.LearnOpengl-CN
+https://learnopengl-cn.readthedocs.io/zh/latest/05%20Advanced%20Lighting/03%20Shadows/01%20Shadow%20Mapping/
