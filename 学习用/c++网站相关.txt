@@ -1,2 +1,4 @@
 1.std::function ºÍ std::bind
 https://wizardforcel.gitbooks.io/cpp-11-faq/content/49.html
+2.c++²Î¿¼ÊÖ²á
+http://classfoo.com
